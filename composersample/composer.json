@@ -1,0 +1,18 @@
+{
+    "name": "zunemoe/composersample",
+    "authors": [
+        {
+            "name": "zunemoe",
+            "email": "2897539+zunemoe@users.noreply.github.com"
+        }
+    ],
+    "require": {
+        "nesbot/carbon": "^3.8",
+        "laravel/laravel": "^12.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "composersample\\": "./"
+        }
+    }
+}
