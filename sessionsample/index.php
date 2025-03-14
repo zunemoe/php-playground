@@ -30,5 +30,14 @@
         <br>
         <a href="register.php">Register</a>
     </div>
+
+    <div class="form">
+        <form action="_actions/upload.php"
+                method="post"
+                enctype="multipart/form-data">
+                <input type="file" name="file">
+                <button type="submit">Upload</button>
+        </form>
+    </div>
 </body>
 </html>
