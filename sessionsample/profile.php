@@ -22,15 +22,17 @@ if(!isset($_SESSION['user'])){
             <div class="alert alert-warning">Cannot upload file</div>
         <?php endif; ?>
 
-        <?php if(file_exists('_actions/uploads/june.jpg')): ?>
-            <img src="_actions/uploads/june.jpg" class="img-thumbnail mb-2" alt="June" width="200">
+        <?php if(file_exists('_actions/photos/profile.jpg')): ?>
+            <img src="_actions/photos/profile.jpg" class="img-thumbnail mb-2" alt="June" width="200">
         <?php endif; ?>
 
         <form action="_actions/upload.php"
                 method="post"
                 enctype="multipart/form-data">
-                <input type="file" name="file" class="form-control">
-                <button class="btn btn-secondary">Upload</button>
+                <div class="input-group mb-3">
+                    <input type="file" name="photo" class="form-control">
+                    <button class="btn btn-secondary">Upload</button>
+                </div>                   
         </form>
 
         <ul class="list-group">
