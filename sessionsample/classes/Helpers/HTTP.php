@@ -1,0 +1,1 @@
+// Class to redirect user to a different page

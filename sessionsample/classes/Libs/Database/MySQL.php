@@ -1,0 +1,1 @@
+// Class to connect to MySQL database

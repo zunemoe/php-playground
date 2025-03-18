@@ -1,0 +1,16 @@
+{
+    "name": "zunemoe/sessionsample",
+    "autoload": {
+        "psr-4": {
+            "Libs\\": "_classes/Libs/",
+            "Helpers\\": "_classes/Helpers/"
+        }
+    },
+    "authors": [
+        {
+            "name": "zunemoe",
+            "email": "2897539+zunemoe@users.noreply.github.com"
+        }
+    ],
+    "require": {}
+}

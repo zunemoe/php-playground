@@ -1,0 +1,1 @@
+// Class to delete user account
