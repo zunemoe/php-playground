@@ -12,5 +12,7 @@
             "email": "2897539+zunemoe@users.noreply.github.com"
         }
     ],
-    "require": {}
+    "require": {
+        "fakerphp/faker": "^1.24"
+    }
 }
