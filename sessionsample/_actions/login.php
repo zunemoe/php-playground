@@ -1,12 +1,26 @@
 <?php
 session_start();
 
-$email = $_POST['email'];
-$password = $_POST['password'];
+include("../vendor/autoload.php");
 
-if($email == 'june@email.com' && $password == 'password'){
-    $_SESSION['user'] = ['username' => 'June'];
-    header('location: ../profile.php');                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    
-}else{
-    header('location: ../index.php?incorrect=1');
+use Libs\Database\MySQL;
+use Libs\Database\UsersTable;
+use Helpers\HTTP;
+
+$email = $_POST['email'];
+$password = md5($_POST['password']);
+
+$table = new UsersTable(new MySQL());
+
+$user = $table->findByEmailAndPassword($email, $password);
+
+if ($user) {
+    if ($user->suspended) {
+        HTTP::redirect("/index.php", "suspended=1");
+    }
+
+    $_SESSION['user'] = $user;
+    HTTP::redirect("/profile.php");
+} else {
+    HTTP::redirect("/index.php", "incorrect=1");
 }
