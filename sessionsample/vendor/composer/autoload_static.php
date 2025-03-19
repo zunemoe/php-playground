@@ -36,11 +36,11 @@ class ComposerStaticInit972d88edafb1ea46b7bd103c4488b828
         ),
         'Libs\\' => 
         array (
-            0 => __DIR__ . '/../..' . '/_classes/Libs',
+            0 => __DIR__ . '/../..' . '/classes/Libs',
         ),
         'Helpers\\' => 
         array (
-            0 => __DIR__ . '/../..' . '/_classes/Helpers',
+            0 => __DIR__ . '/../..' . '/classes/Helpers',
         ),
         'Faker\\' => 
         array (

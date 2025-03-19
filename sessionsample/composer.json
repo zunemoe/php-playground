@@ -2,8 +2,8 @@
     "name": "zunemoe/sessionsample",
     "autoload": {
         "psr-4": {
-            "Libs\\": "_classes/Libs/",
-            "Helpers\\": "_classes/Helpers/"
+            "Libs\\": "classes/Libs/",
+            "Helpers\\": "classes/Helpers/"
         }
     },
     "authors": [
