@@ -5,7 +5,7 @@ namespace Helpers;
 
 class HTTP
 {
-    static $base_url = "http://localhost/sessionsample/";
+    static $base_url = "http://localhost/phpprojects/php-playground/sessionsample";
 
     static function redirect($path, $query = "")
     {

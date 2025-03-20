@@ -26,9 +26,9 @@
             <input type="text" name="name" class="form-control mb-2" placeholder="Name" required>
             <input type="email" name="email" class="form-control mb-2" placeholder="Email" required>
             <input type="text" name="phone" class="form-control mb-2" placeholder="Phone" required>
-            <textarea type="address" class="form-control mb-2" placeholder="Address" required></textarea>
+            <textarea name="address" class="form-control mb-2" placeholder="Address" required></textarea>
             <input type="password" name="password" class="form-control mb-2" placeholder="Password" required>
-            
+
             <button type="submit" class="w-100 btn-lg btn-primary">Register</button>
         </form>
         <br>
