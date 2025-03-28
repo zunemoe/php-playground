@@ -38,7 +38,7 @@ $auth = Auth::check();
 
         <table class="table table-striped table-bordered">
             <tr>
-                <th></th>ID</th>
+                <th>ID</th>
                 <th>Name</th>
                 <th>Email</th>
                 <th>Phone</th>
@@ -52,11 +52,11 @@ $auth = Auth::check();
                     <td><?= $user->email ?></td>    
                     <td><?= $user->phone ?></td>    
                     <td>
-                        <?php if($user->value === "1"): ?>
+                        <?php if($user->value === 1): ?>
                             <span class="badge bg-secondary">
                                 <?= $user->role ?>
                             </span>
-                        <?php elseif($user->value === "2"): ?>
+                        <?php elseif($user->value === 2): ?>
                             <span class="badge bg-primary">
                                 <?= $user->role ?>
                             </span>
@@ -71,7 +71,7 @@ $auth = Auth::check();
                             <div class="btn-group dropdown">
                                 <a href="#" class="btn btn-sm btn-outline-primary dropdown-toggle" data-bs-toggle="dropdown">Change Role</a>
 
-                                <div class="dropdown=menu dropdown-menu-dark">
+                                <div class="dropdown-menu dropdown-menu-dark">
                                     <a href="_actions/role.php?id=<?= $user->id ?>&role=1" class="dropdown-item">User</a>
                                     <a href="_actions/role.php?id=<?= $user->id ?>&role=2" class="dropdown-item">Manager</a>
                                     <a href="_actions/role.php?id=<?= $user->id ?>&role=3" class="dropdown-item">Admin</a>
@@ -87,12 +87,12 @@ $auth = Auth::check();
                                     <a href="_actions/delete.php?=id=<?= $user->id ?>" class="btn btn-sm btn-outline-danger" onClick="return confirm('Are you sure?')">Delete</a>
                                 <?php endif ?>
                             </div>
-                            <?php else: ?>
-                                ###
-                            <?php endif ?>
+                        <?php else: ?>
+                            ###
+                        <?php endif ?>
                     </td>
                 </tr>
-                <?php endforeach ?>
+            <?php endforeach ?>
         </table>
     </div>
 
