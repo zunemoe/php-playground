@@ -85,4 +85,34 @@ class UsersTable
         $statement->execute([ 'id' => $id ]);
         return $statement->rowCount();
     }
+
+    public function unsuspend($id)
+    {
+        $statement = $this->db->prepare("
+            UPDATE users SET suspended=0 WHERE id=:id"
+        );
+
+        $statement->execute([ 'id'=> $id ]);
+
+        return $statement->rowCount();
+    }
+
+    public function changeRole($id, $role)
+    {
+        $statement = $this->db->prepare("
+            UPDATE users SET role_id = :role WHERE id = :id"
+        );
+
+        $statement->execute([ 'id' => $id, 'role' => $role ]);
+        return $statement->rowCount();
+    }
+
+    public function delete( $id )
+    {
+        $statement = $this->db->prepare("
+            DELETE FROM users WHERE id = :id"
+        );
+        $statement->execute([ 'id' => $id ]);
+        return $statement->rowCount();
+    }
 }
